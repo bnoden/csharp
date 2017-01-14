@@ -1,0 +1,23 @@
+
+http://starboundsoftware.com/books/c-sharp/try-it-out/
+
+byte	1	0 to 255
+short	2	-32,768 to 32,767
+int		4	-2,147,483,648 to 2,147,483,647
+long	8	-9,223,372,036,854,775,808 to 9,223,372,036,854,775,80
+
+sbyte	1	-128 to +127
+ushort	2	0 to 65,535
+uint	4	0 to 4,294,967,295
+ulong	8	0 to 18,446,744,073,709,551,615
+char 	2	U+0000 to U+ffff (All Unicode characters)
+
+
+
+Comment method descriptions
+	-with XML comments
+
+Value and Reference types
+	int[] a = new int[] {1,2,3};
+	int[] b = a; b[0] = 17;		// now a[0] == 17
+
