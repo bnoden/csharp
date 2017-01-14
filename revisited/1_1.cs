@@ -21,12 +21,10 @@ using System;
 
 class Program {
     static void Main(string[] args) {
-
         decimal pay = 0.01m;
         int day = 0, bigDay = 0;
 
-        Console.WriteLine("Day\tAmount Owed");
-        Console.WriteLine("---\t-----------");
+        Console.WriteLine("Day\tAmount Owed\n---\t-----------");
 
         for (int i = 0; i < 64; i++) {
             if (pay >= 1000000 && bigDay < 1) { bigDay = day; }
