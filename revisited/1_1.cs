@@ -36,7 +36,7 @@ namespace ConsoleApplication3 {
                     }
                 }
                 day++;
-                Console.WriteLine(day + "\t{0:c2}", pay);
+                Console.WriteLine("{0}\t{1:c2}", day, pay);
                 pay *=2.0m;
                 
             }
