@@ -19,28 +19,23 @@ On day 27 the king paid a total of one million dollars */
 
 using System;
 
-namespace ConsoleApplication3 {
-    class Program {
-        static void Main(string[] args) {
+class Program {
+    static void Main(string[] args) {
 
-            decimal pay = 0.01m;
-            int day = 0;
-            int bigDay = 0;
+        decimal pay = 0.01m;
+        int day = 0, bigDay = 0;
 
-            Console.WriteLine("Day\tAmount Owed");
-            Console.WriteLine("---\t-----------");
-            for (int i = 0; i < 64; i++) {
-                if (pay >= 1000000) {
-                    if (bigDay < 1) {
-                        bigDay = day;
-                    }
-                }
-                day++;
-                Console.WriteLine("{0}\t{1:c2}", day, pay);
-                pay *=2.0m;
-                
-            }
-            Console.WriteLine("\nOn day " + bigDay + "the king paid a total of one million dollars.");
+        Console.WriteLine("Day\tAmount Owed");
+        Console.WriteLine("---\t-----------");
+
+        for (int i = 0; i < 64; i++) {
+            if (pay >= 1000000 && bigDay < 1) { bigDay = day; }
+
+            day++;
+            Console.WriteLine("{0}\t{1:c2}", day, pay);
+            pay+=pay;
         }
+        Console.WriteLine("\nOn day " + bigDay +
+            " the king paid a total of one million dollars.");
     }
-}
+};
