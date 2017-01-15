@@ -21,3 +21,24 @@ Value and Reference types
 	int[] a = new int[] {1,2,3};
 	int[] b = a; b[0] = 17;		// now a[0] == 17
 
+Properties
+	simplified in C#:
+		private int score;
+		public int Score {
+			get {return score;}
+			private set {score = value;}	// value is a keyword
+		}
+	even simpler:
+		public int Score {get; set;}
+
+		With above techniques you can now use player.Score instead of player.getScore() and player.setScore(int)
+			also:
+			public class Vector2 {
+				public double X { get; set; } = 0;
+				public double Y { get; set; } = 0;
+			}
+
+	Object initializer syntax:
+		Book book = new Book() { Title = "Frankenstein", Author = "Mary Shelley" };
+
+
