@@ -1,4 +1,5 @@
-/*2. Carbon-14 dating is a common technique for measuring the approximate age of matter that was 
+/*
+2. Carbon-14 dating is a common technique for measuring the approximate age of matter that was 
 once living. The formula for measuring time base on Carbon-14 decay is
 t = (T / ln(2) * ln(1 + D / P)) where T is the half-life of Carbon-14
 (5730 years), ln(2) is natural logarithm of 2, D is the amount of carbon-14 fund in a given dead sample, and 
@@ -18,6 +19,14 @@ using System;
 
 class Program {
     static void Main(string[] args) {
+        double dp, t;
 
+        Console.WriteLine("Enter the ratio D/P: ");
+
+        dp = Convert.ToDouble(Console.ReadLine());
+        t = (5730/Math.Log(2)*Math.Log(1+dp));
+
+        Console.WriteLine("Given a D/P ratio of {0} for C14, " +
+            "the age of the sample is {1:f2}", dp, t);
     }
 };

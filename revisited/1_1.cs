@@ -1,4 +1,5 @@
-/*1. An old Arabian legend has it that a fabulously wealthy but unthinking king agreed to give a 
+/*
+1. An old Arabian legend has it that a fabulously wealthy but unthinking king agreed to give a 
 beggar one cent and double the amount for 64 days. Then determine on which day the king will 
 have paid the beggar a total of one million dollars. Using this information, write at C#
  program that 
@@ -15,7 +16,8 @@ Day      Amount Owed
  3        0.04 
  ... 
 64        92233720368547760.00
-On day 27 the king paid a total of one million dollars */
+On day 27 the king paid a total of one million dollars 
+*/
 
 using System;
 
