@@ -42,3 +42,49 @@ Properties
 		Book book = new Book() { Title = "Frankenstein", Author = "Mary Shelley" };
 
 
+enum - reference type
+class - reference type 
+struct - value type 
+	used to store compound data that does not involve complicated methods and behaviors
+		all the simple types are structs
+		primitive types are all aliases for certain pre-defined structs and classes 
+
+
+Checking object type and casting
+	ex:
+	if (polygon is Square) {
+		Square square = (Square)polygon;
+	}
+
+	The "as" keyword
+		ex:
+		Polygon polygon = new Square(4);
+		Square square = polygon as Square;
+
+	You can create an array of the base class and put any derived class inside of it.
+	In any case where a base class can be used, you can always substitute a derived class.
+		but constructors are not inherited
+
+Sealed class - cannot be inherited
+
+C# does not support multiple inheritance, unlike C++
+
+override changes a virtual method from an abstract base class
+	use base keyword for original implementation
+		example-
+			base.Search()
+	new keyword is for new method with same name as method from base class, but unrelated
+		should be avoided to prevent confusion
+
+Interfaces
+	interface members are always public and abstract
+
+
+Variable number of parameters
+	example - public static double Average(params int[] numbers) {}
+				int[] numbers = new int[5] { 5, 4, 3, 2, 1 };
+				Average(numbers);
+
+
+
+
