@@ -7080,10 +7080,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\000\\0csharp\\0csharp.csproj",
-      "projectName": "0csharp",
-      "projectPath": "D:\\000\\0csharp\\0csharp.csproj",
-      "outputPath": "D:\\000\\0csharp\\obj\\",
+      "projectUniqueName": "D:\\000\\0csharp\\_vs2017\\bn01\\02_vs2017\\02_vs2017.csproj",
+      "projectName": "02_vs2017",
+      "projectPath": "D:\\000\\0csharp\\_vs2017\\bn01\\02_vs2017\\02_vs2017.csproj",
+      "outputPath": "D:\\000\\0csharp\\_vs2017\\bn01\\02_vs2017\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

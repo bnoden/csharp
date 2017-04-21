@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Reflection;
 
 namespace _01_vs2017
 {
@@ -10,6 +12,10 @@ namespace _01_vs2017
 
         static void Main(string[] args)
         {
+            System.Xml.XmlReader reader;
+            System.Xml.Linq.XElement element;
+            System.Net.Http.HttpClient client;
+
             Program p = new Program();
 
             Console.Write("user name: ");
@@ -24,7 +30,18 @@ namespace _01_vs2017
             }
 
             Console.ReadKey();
-            Console.WriteLine("\nHello, "+p.user);
+            Console.WriteLine("\nHello, "+p.user+'\n');
+
+            foreach (var r in Assembly.GetEntryAssembly()
+                .GetReferencedAssemblies()) {
+                var a = Assembly.Load(new AssemblyName(r.FullName));
+                int methodCount = 0;
+                foreach (var t in a.DefinedTypes) {
+                    methodCount+=t.GetMethods().Count();
+                }
+                Console.WriteLine($"{a.DefinedTypes.Count():N0} types " +
+                    $"with {methodCount:N0} methods in {r.Name} assembly.");
+            }
 
 
             Console.ReadKey();
