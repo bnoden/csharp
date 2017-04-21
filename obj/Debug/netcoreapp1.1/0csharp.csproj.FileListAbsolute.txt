@@ -1,0 +1,4 @@
+D:\000\0csharp\bin\Debug\netcoreapp1.1\0csharp.deps.json
+D:\000\0csharp\bin\Debug\netcoreapp1.1\0csharp.runtimeconfig.json
+D:\000\0csharp\bin\Debug\netcoreapp1.1\0csharp.runtimeconfig.dev.json
+D:\000\0csharp\obj\Debug\netcoreapp1.1\0csharp.AssemblyInfo.cs

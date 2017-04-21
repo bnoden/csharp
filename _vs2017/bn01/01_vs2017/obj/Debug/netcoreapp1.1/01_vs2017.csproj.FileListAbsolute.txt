@@ -1,0 +1,9 @@
+D:\000\0csharp\_vs2017\bn01\01_vs2017\bin\Debug\netcoreapp1.1\01_vs2017.deps.json
+D:\000\0csharp\_vs2017\bn01\01_vs2017\bin\Debug\netcoreapp1.1\01_vs2017.runtimeconfig.json
+D:\000\0csharp\_vs2017\bn01\01_vs2017\bin\Debug\netcoreapp1.1\01_vs2017.runtimeconfig.dev.json
+D:\000\0csharp\_vs2017\bn01\01_vs2017\bin\Debug\netcoreapp1.1\01_vs2017.dll
+D:\000\0csharp\_vs2017\bn01\01_vs2017\bin\Debug\netcoreapp1.1\01_vs2017.pdb
+D:\000\0csharp\_vs2017\bn01\01_vs2017\obj\Debug\netcoreapp1.1\01_vs2017.csprojResolveAssemblyReference.cache
+D:\000\0csharp\_vs2017\bn01\01_vs2017\obj\Debug\netcoreapp1.1\01_vs2017.AssemblyInfo.cs
+D:\000\0csharp\_vs2017\bn01\01_vs2017\obj\Debug\netcoreapp1.1\01_vs2017.dll
+D:\000\0csharp\_vs2017\bn01\01_vs2017\obj\Debug\netcoreapp1.1\01_vs2017.pdb
