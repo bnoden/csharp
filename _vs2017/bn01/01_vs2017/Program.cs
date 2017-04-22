@@ -14,46 +14,49 @@ namespace _01_vs2017
             var p = new Program();
             p.user = "";
             while (p.user.Length < 1) {
-                Console.Write("user name: ");
-                p.user = Console.ReadLine();
+                Write("user name: ");
+                p.user = ReadLine();
             }
 
             p.pwd = "";
-            Console.Write("password: ");
+            Write("password: ");
             
             while (p.pwd.Length < PWD_MAX) {
-                Console.ReadKey(true);
+                ReadKey(true);
                 p.pwd+="*";
-                Console.Write("*");
+                Write("*");
             }
 
-            Console.ReadKey();
-            Console.WriteLine("\nHello, "+p.user+'\n');
+            ReadKey();
+            WriteLine("\nHello, "+p.user+'\n');
 
-            Console.WriteLine($"{default(int)}");
-            Console.WriteLine($"{default(bool)}");
-            Console.WriteLine($"{default(DateTime)}");
+            WriteLine($"{default(int)}");
+            WriteLine($"{default(bool)}");
+            WriteLine($"{default(DateTime)}");
 
             int? maybenull = null;
-            Console.WriteLine("\nmaybenull = "+maybenull.GetValueOrDefault());
+            WriteLine("\nmaybenull = "+maybenull.GetValueOrDefault());
             maybenull = 0xff;
-            Console.WriteLine("\nmaybenull = "+maybenull.GetValueOrDefault());
-            Console.ReadKey();
+            WriteLine("\nmaybenull = "+maybenull.GetValueOrDefault());
+            ReadKey();
+
             maybenull = null;
             var ifnull = maybenull ?? 0xfa;
-            Console.Write("\nmaybenull = "+maybenull.GetValueOrDefault());
-            Console.WriteLine("\tifnull = "+ifnull);
-            Console.ReadKey();
+            Write("\nmaybenull = "+maybenull.GetValueOrDefault());
+            WriteLine("\tifnull = "+ifnull);
+            ReadKey();
+
             maybenull = 0xab;
-            Console.Write("\nmaybenull = "+maybenull.GetValueOrDefault());
-            Console.WriteLine("\tifnull = "+ifnull);
-            Console.ReadKey();
+            Write("\nmaybenull = "+maybenull.GetValueOrDefault());
+            WriteLine("\tifnull = "+ifnull);
+            ReadKey();
+
             ifnull = maybenull ?? 0xfa;
-            Console.Write("\nmaybenull = "+maybenull.GetValueOrDefault());
-            Console.WriteLine("\tifnull = "+ifnull);
+            Write("\nmaybenull = "+maybenull.GetValueOrDefault());
+            WriteLine("\tifnull = "+ifnull);
 
 
-            Console.ReadKey();
+            ReadKey();
             return;
         }
     }
