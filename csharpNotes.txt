@@ -85,6 +85,13 @@ Variable number of parameters
 				int[] numbers = new int[5] { 5, 4, 3, 2, 1 };
 				Average(numbers);
 
+double.Epsilon = smallest possible double
+double.Infinity = infinitely large
+double.NaN = !Number
 
+
+String interpolation
+	"Put {something} in a string"
+	{somebignumber:N0} = number with commas, 0 decimals
 
 

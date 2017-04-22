@@ -1,10 +1,13 @@
 ﻿using System;
 
-namespace _01_vs2017
+namespace _02_vs2017
 {
-    class Program01
+    class Program
     {
-        
+        static void Main(string[] args)
+        {
+            
+
 
 
             Console.ReadKey();

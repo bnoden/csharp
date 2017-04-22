@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Linq;
-using System.Reflection;
+using static System.Console;
 
 namespace _01_vs2017
 {
@@ -12,18 +11,17 @@ namespace _01_vs2017
 
         static void Main(string[] args)
         {
-            System.Xml.XmlReader reader;
-            System.Xml.Linq.XElement element;
-            System.Net.Http.HttpClient client;
+            var p = new Program();
+            p.user = "";
+            while (p.user.Length < 1) {
+                Console.Write("user name: ");
+                p.user = Console.ReadLine();
+            }
 
-            Program p = new Program();
-
-            Console.Write("user name: ");
-            p.user = Console.ReadLine();
             p.pwd = "";
             Console.Write("password: ");
             
-            while ((p.pwd).Length <= PWD_MAX) {
+            while (p.pwd.Length < PWD_MAX) {
                 Console.ReadKey(true);
                 p.pwd+="*";
                 Console.Write("*");
@@ -32,16 +30,27 @@ namespace _01_vs2017
             Console.ReadKey();
             Console.WriteLine("\nHello, "+p.user+'\n');
 
-            foreach (var r in Assembly.GetEntryAssembly()
-                .GetReferencedAssemblies()) {
-                var a = Assembly.Load(new AssemblyName(r.FullName));
-                int methodCount = 0;
-                foreach (var t in a.DefinedTypes) {
-                    methodCount+=t.GetMethods().Count();
-                }
-                Console.WriteLine($"{a.DefinedTypes.Count():N0} types " +
-                    $"with {methodCount:N0} methods in {r.Name} assembly.");
-            }
+            Console.WriteLine($"{default(int)}");
+            Console.WriteLine($"{default(bool)}");
+            Console.WriteLine($"{default(DateTime)}");
+
+            int? maybenull = null;
+            Console.WriteLine("\nmaybenull = "+maybenull.GetValueOrDefault());
+            maybenull = 0xff;
+            Console.WriteLine("\nmaybenull = "+maybenull.GetValueOrDefault());
+            Console.ReadKey();
+            maybenull = null;
+            var ifnull = maybenull ?? 0xfa;
+            Console.Write("\nmaybenull = "+maybenull.GetValueOrDefault());
+            Console.WriteLine("\tifnull = "+ifnull);
+            Console.ReadKey();
+            maybenull = 0xab;
+            Console.Write("\nmaybenull = "+maybenull.GetValueOrDefault());
+            Console.WriteLine("\tifnull = "+ifnull);
+            Console.ReadKey();
+            ifnull = maybenull ?? 0xfa;
+            Console.Write("\nmaybenull = "+maybenull.GetValueOrDefault());
+            Console.WriteLine("\tifnull = "+ifnull);
 
 
             Console.ReadKey();
