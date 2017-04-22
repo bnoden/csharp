@@ -93,5 +93,9 @@ double.NaN = !Number
 String interpolation
 	"Put {something} in a string"
 	{somebignumber:N0} = number with commas, 0 decimals
+	someprice = 100; {someprice:C} = $100.00
+
+try {to do something}
+catch {if error do this instead}
 
 
