@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Xml.Linq;
 using System.Text.RegularExpressions;
 using static System.Console;
@@ -10,9 +11,9 @@ namespace _04_vs2017
         static void Main(string[] args)
         {
             var doc = new XDocument();
-
-            string isaidno = "";
             const int MAX_ATTEMPTS = 3;
+            string isaidno = "";
+            
             int attempt = 1;
             var idCheck = new Regex(@"^[0-9]{10}$");
             DateTime dt;
@@ -23,8 +24,18 @@ namespace _04_vs2017
                 isaidno = ReadLine();
                 attempt++;
                 if (!(attempt<=MAX_ATTEMPTS)) {
+                    
+                    WriteLine("\nTop-level supersecret agent has implementd STRIPES protocol.\n");
+
+                    int toBin = 2;
+                    int toHex = 16;
+                    
+                    for (int b = 128; b < 255; b++) {
+                        Write("0b"+Convert.ToString(b, toBin));
+                        Write(" 0x"+Convert.ToString(b*16, toHex)+' ');
+                    }
                     dt = DateTime.Now;
-                    WriteLine($"Verification bypassed {dt}");
+                    WriteLine($"\n\nVerification bypassed {dt}");
                     WriteLine("Warning: Connection is not secure and may be monitored.");
                     isaidno = "0123456789";
                 }
