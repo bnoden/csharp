@@ -25,14 +25,14 @@ namespace _04_vs2017
                 attempt++;
                 if (!(attempt<=MAX_ATTEMPTS)) {
                     
-                    WriteLine("\nTop-level supersecret agent has implementd STRIPES protocol.\n");
+                    WriteLine("\nTop-level supersecret agent has implementd [BITSTRIPE] protocol.\n");
 
                     int toBin = 2;
                     int toHex = 16;
                     
                     for (int b = 128; b < 255; b++) {
-                        Write("0b"+Convert.ToString(b, toBin));
-                        Write(" 0x"+Convert.ToString(b*16, toHex)+' ');
+                        Write("0b"+Convert.ToString(b, toBin)
+                            +" 0x"+Convert.ToString(b*16, toHex)+' ');
                     }
                     dt = DateTime.Now;
                     WriteLine($"\n\nVerification bypassed {dt}");
