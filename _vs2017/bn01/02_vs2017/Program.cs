@@ -4,7 +4,7 @@ using static System.Console;
 
 namespace _02_vs2017
 {
-    class TryCatch
+    class Program
     {
         static void Main(string[] args)
         {
