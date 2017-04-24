@@ -12,14 +12,15 @@ namespace _05_vs2017
             CultureInfo localization = CultureInfo.CurrentUICulture;
             WriteLine($"The current globalization culture is {globalization.Name}: {globalization.DisplayName}"); 
             WriteLine($"The current localization culture is {localization.Name}: {localization.DisplayName}"); 
-            WriteLine(); 
-            WriteLine("en-US: English (United States)");
-            WriteLine("en-GB: English (United Kingdom)");
-            WriteLine("fr-CA: French (Canada)");
-            WriteLine("fr-FR: French (France)");
-            WriteLine("es-MX: Spanish (Mexico)");
-            WriteLine("es-ES: Spanish (Spain)");
-            WriteLine("de-DE: German (Germany)");
+            WriteLine();
+            WriteLine("_Code__|_Language_|_Country_");
+            WriteLine(" en-US | English  | United States");
+            WriteLine(" en-GB | English  | United Kingdom");
+            WriteLine(" fr-CA | French   | Canada");
+            WriteLine(" fr-FR | French   | France");
+            WriteLine(" es-MX | Spanish  | Mexico");
+            WriteLine(" es-ES | Spanish  | Spain");
+            WriteLine(" de-DE | German   | Germany");
 
             Write("\nEnter an ISO culture code: ");
 
@@ -30,8 +31,6 @@ namespace _05_vs2017
                 CultureInfo.CurrentCulture = ci;
                 CultureInfo.CurrentUICulture = ci;
             } 
-
-            
             
             try {
                 Write("Enter your name: ");
