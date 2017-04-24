@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Xml.Linq;
 using System.Text.RegularExpressions;
 using static System.Console;
@@ -83,8 +82,11 @@ namespace _04_vs2017
                     dt = DateTime.Now;
                     WriteLine($"Invalid input. Attempt logged {dt}");
                     ReadKey();
+                } else if (success) {
+                    dt = DateTime.Now;
+                    ReadKey();
+                    WriteLine($"{dt} \tTarget's status updated.");
                 }
-                WriteLine("Wait...");
                 ReadKey();
             }
 
