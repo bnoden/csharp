@@ -12,6 +12,7 @@ namespace _04_vs2017
             DateTime msg = DateTime.Now;
             var doc = new XDocument();
             const int MAX_ATTEMPTS = 3, toBin = 2, toHex = 16;
+            const string DEFAULT_ID = "0123456789";
             string isaidno = "";
             
             int attempt = 1;
@@ -37,7 +38,7 @@ namespace _04_vs2017
                     WriteLine($"\n\nVerification bypassed {dt}");
                     ReadKey();
                     WriteLine("Warning: Connection is not secure and may be monitored.");
-                    isaidno = "0123456789";
+                    isaidno = DEFAULT_ID;
                     ReadKey();
                 }
             }
@@ -110,7 +111,7 @@ namespace _04_vs2017
             WriteLine($"The definition of long is {keywords["long"]}"); 
             ReadKey();
 
-            WriteLine("That is all. Formtting disk...");
+            WriteLine("That is all. Formatting disk...");
             ReadKey();
             WriteLine("...");
             ReadKey();
