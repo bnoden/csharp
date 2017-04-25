@@ -39,7 +39,7 @@ namespace _06_vs2017
         {
             bool done = false;
             string input = "";
-
+            /*
             while(!done) {
                 WriteLine("\nPress ENTER to START");
                 WriteLine("Type \"QUIT\" to EXIT program");
@@ -48,15 +48,31 @@ namespace _06_vs2017
 
                 if (input=="quit") { done=true; }
                 else if (input!="quit") {
-                    Recorder.Start();
-
-                    int[] maniacs = Enumerable.Range(0x0001, 0x2710).ToArray();
-            
+                    Recorder.Start();            
                     WriteLine("Press ENTER to STOP");
                     ReadLine();
                     Recorder.Stop();
                 }
             }
+            */
+            int[] maniacs = Enumerable.Range(0x0001, 0x2710).ToArray();
+            Recorder.Start();
+            WriteLine("Using string");
+            string s = "";
+            for (int i = 0; i < maniacs.Length; i++) {
+                s+=maniacs[i]+", ";
+            }
+            Recorder.Stop();
+            Recorder.Start();
+            WriteLine("Using StringBuilder");
+            var builder = new System.Text.StringBuilder();
+            for (int i = 0; i < maniacs.Length; i++) {
+                builder.Append(maniacs[i]);
+                builder.Append(", ");
+            }
+            Recorder.Stop();
+            ReadLine();
+
             return;
         }
     }

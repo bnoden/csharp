@@ -99,3 +99,12 @@ try {to do something}
 catch {if error do this instead}
 
 
+    string fullname = "Saul Goodman"; 
+    int indexOfTheSpace = fullname.IndexOf(' '); 
+    string firstname = fullname.Substring(0, indexOfTheSpace); 
+    string lastname = fullname.Substring(indexOfTheSpace + 1); 
+    WriteLine($"{lastname}, {firstname}");
+
+Avioid concat and "+" for strings
+	Instead using interpolation{} or StringBuilder
+
