@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using static System.Console;
 
 namespace Packt.CS7
 {
@@ -15,5 +16,19 @@ namespace Packt.CS7
         
         // read-only fields
         public readonly string HomePlanet = "Earth";
+        public readonly DateTime Instantiated;
+        // constructors
+        public Person() {
+            Name = "Unknown";
+            Instantiated = DateTime.Now;
+        }
+        public Person(string initName) {
+            Name = initName;
+            Instantiated = DateTime.Now;
+        }
+        public void inst() {
+            WriteLine($"{this.Name} was instantiated at {this.Instantiated:hh:mm:ss} on {this.Instantiated:dddd, d MMMM yyyy}");
+            ReadLine();
+            }
     }
 }
