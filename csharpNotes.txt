@@ -108,3 +108,9 @@ catch {if error do this instead}
 Avioid concat and "+" for strings
 	Instead using interpolation{} or StringBuilder
 
+Use enum values to store combinatins of discreet options.
+	Derive an enum from byte if there are up to eight options,
+		short if there are up to 16, 
+			int for up to 32,
+				long for up to 64 options.
+
