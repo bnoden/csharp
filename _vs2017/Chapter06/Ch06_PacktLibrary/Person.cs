@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Packt.CS7
 {
@@ -10,5 +11,9 @@ namespace Packt.CS7
         public WondersOfTheAncientWorld FavoriteAncientWonder;
         public WondersOfTheAncientWorld BucketList;
 
+        public List<Person> Children = new List<Person>();
+        
+        // read-only fields
+        public readonly string HomePlanet = "Earth";
     }
 }

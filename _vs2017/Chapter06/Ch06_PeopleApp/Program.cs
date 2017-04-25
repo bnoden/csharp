@@ -26,6 +26,24 @@ namespace Ch06_PeopleApp
                 WondersOfTheAncientWorld.MausoleumAtHalicarnassus;
             //p1.BucketList = (WondersOfTheAncientWorld)18;
             WriteLine($"{p1.Name}'s bucket list is {p1.BucketList}");
+
+            p1.Children.Add(new Person());
+            p1.Children.Add(new Person());
+            WriteLine($"{p1.Name} has {p1.Children.Count} children.");
+
+            WriteLine($"{p1.Name} comes from {p1.HomePlanet}");
+            WriteLine($"{p2.Name} comes from {p2.HomePlanet}");
+
+            BankAccount.InterestRate = 0.012M;
+            var ba1 = new BankAccount();
+            ba1.AccountName = "Mr. Abrahamowitz";
+            ba1.Balance = 21387.16M;
+            WriteLine($"{ba1.AccountName} earned {ba1.Balance*BankAccount.InterestRate:C} interest.");
+            var ba2 = new BankAccount();
+            ba2.AccountName = "Mr. Morris";
+            ba2.Balance = 62.48M;
+            WriteLine($"{ba2.AccountName} earned {ba2.Balance*BankAccount.InterestRate:C} interest.");
+
         }
     }
 }
