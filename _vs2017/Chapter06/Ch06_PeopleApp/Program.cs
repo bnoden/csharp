@@ -62,6 +62,21 @@ namespace Ch06_PeopleApp
             var p3 = new Person("Alfador");
             p3.inst();
 
+            // C#4 tuple
+            Tuple<string, int> oldfruit = p1.GetFruitCS4();
+            WriteLine($"There are {oldfruit.Item2} {oldfruit.Item1}.");
+
+            // C#7 tuple
+            (string, int) newfruit = p1.GetFruitCS7();
+            WriteLine($"{newfruit.Item1}, {newfruit.Item2} there are.");
+            ReadLine();
+
+            var fruitNamed = p1.GetNamedFruit();
+            WriteLine($"You say there are {fruitNamed.Number} {fruitNamed.Name}?");
+
+            (string fruitName, int fruitNumber) = p1.GetFruitCS7();
+            WriteLine($"Deconstructed: {fruitName}, {fruitNumber}");
+
         }
         
     }

@@ -26,6 +26,7 @@ namespace Packt.CS7
             Name = initName;
             Instantiated = DateTime.Now;
         }
+
         public void inst() {
             WriteLine($"{this.Name} was instantiated at {this.Instantiated:hh:mm:ss} on {this.Instantiated:dddd, d MMMM yyyy}");
             ReadLine();
@@ -38,5 +39,19 @@ namespace Packt.CS7
             hp = this.HomePlanet;
             return $"{this.Name} comes from {hp}";
         }
+
+        // C# 4/.NET 4.0 System.Tuple type
+        public Tuple<string, int> GetFruitCS4() {
+            return Tuple.Create("Grapes", 5);
+        }
+        // C# 7 syntax and new System.ValueTuple type
+        public (string, int) GetFruitCS7() {
+            return ("Grapes", 5);
+        }
+
+        public (string Name, int Number) GetNamedFruit() {
+            return (Name: "Grapes", Number: 5);
+        }
+
     }
 }
