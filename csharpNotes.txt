@@ -114,3 +114,7 @@ Use enum values to store combinatins of discreet options.
 			int for up to 32,
 				long for up to 64 options.
 
+Use properties instead of fields when you want to validate what value can be stored,
+	when you want to read and write to fields without using methods,
+		when you want to data bind in XAML.
+

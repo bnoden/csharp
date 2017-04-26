@@ -4,7 +4,7 @@ using static System.Console;
 
 namespace Packt.CS7
 {
-    public class Person
+    public partial class Person
     {
 
         public string Name;
@@ -28,16 +28,16 @@ namespace Packt.CS7
         }
 
         public void inst() {
-            WriteLine($"{this.Name} was instantiated at {this.Instantiated:hh:mm:ss} on {this.Instantiated:dddd, d MMMM yyyy}");
+            WriteLine($"{Name} was instantiated at {Instantiated:hh:mm:ss} on {Instantiated:dddd, d MMMM yyyy}");
             ReadLine();
             }
         public string GetOrigin(DateTime dt) {
-            dt = this.DateOfBirth;
-            return $"{this.Name} was born on {dt:dddd, d MMMM yyyy}";
+            dt = DateOfBirth;
+            return $"{Name} was born on {dt:dddd, d MMMM yyyy}";
         }
         public string GetOrigin(string hp) {
-            hp = this.HomePlanet;
-            return $"{this.Name} comes from {hp}";
+            hp = HomePlanet;
+            return $"{Name} comes from {hp}";
         }
 
         // C# 4/.NET 4.0 System.Tuple type

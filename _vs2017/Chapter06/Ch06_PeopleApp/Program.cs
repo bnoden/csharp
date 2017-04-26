@@ -9,8 +9,6 @@ namespace Ch06_PeopleApp
         
         static void Main(string[] args)
         {
-            
-
             var p0 = new Person();
             p0.inst();
 
@@ -76,6 +74,17 @@ namespace Ch06_PeopleApp
 
             (string fruitName, int fruitNumber) = p1.GetFruitCS7();
             WriteLine($"Deconstructed: {fruitName}, {fruitNumber}");
+            ReadLine();
+
+            var friend = new Person { Name = "Chandler Bing",
+                DateOfBirth = new DateTime(1969, 8, 19) };
+            WriteLine(friend.Origin);
+            WriteLine(friend.Greeting);
+            WriteLine($"{friend.Name} is wise because he is {friend.Age} years old.");
+            friend.FavIceCream = "Vanilla";
+            WriteLine($"{friend.Name.Split(' ')[0]}'s favorite ice-cream flavor is {friend.FavIceCream}.");
+            friend.FavPrimaryColor = "Red";
+            WriteLine($"Mr. {friend.Name.Split(' ')[1]}'s favorite primary color is {friend.FavPrimaryColor}.");
 
         }
         
