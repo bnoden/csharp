@@ -123,3 +123,27 @@ Microsoft has 2 predefined delegates for use as events:
     public delegate void EventHandler<TEventArgs>(object sender, TEventArgs e);
 
 
+stack memory and heap memory
+	stack - fast but limited
+	heap - slow but plentiful
+
+	class and struct
+		class - defining a reference type
+			memory allocated on the heap, only the memory address (and some overhead) stored on stack
+			most types are class types, including string
+		struct - define a value type
+			memory allocated on the stack
+				note: if struct uses non-struct types, they're stored on heap
+				note: cannot inherit from struct
+			most common .NET Core struct types:
+				Numbers - byte, short, innt, double, etc.
+				Miscellaneous - char, bool
+				System.Drawing - Color, Point, Rectangle
+			tip: use a struct if:
+				1. a type uses only struct types for its fields, and
+					2. all fields use 16bytes or less of stack memory, and
+						3. nothing will derive from it
+				otherwise probably use class
+
+
+
