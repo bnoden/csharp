@@ -23,5 +23,21 @@ namespace Packt.CS7
             return progeny;
         }
 
+        // + operator
+        public static Person operator+ (Person p1, Person p2) {
+            return p1.HoldHands(p2);
+        }
+
+        // method with local function
+        public int Factorial(int num) {
+            if (num < 0) {
+                throw new ArgumentException($"{nameof(num)} cannot be less than 0");
+            }
+            int localFactorial(int localNum) {
+                return localNum < 1 ? 1: localNum*localFactorial(localNum-1);
+            }
+            return localFactorial(num);
+        }
+
     }
 }
