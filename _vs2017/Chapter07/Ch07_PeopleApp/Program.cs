@@ -66,7 +66,16 @@ namespace Ch07_PeopleApp
                 $"({dv1.X}, {dv1.Y}) + ({dv2.X}, {dv2.Y}) = ({dv3.X}, {dv3.Y})"
                 );
 
-
+            var e1 = new Employee {
+                ID = 0x27DADC4,
+                Name = "Benny Cook",
+                DateOfBirth = new DateTime(2009, 9, 6),
+                Location = 0xc112,
+                Section = "CT0010-1011",
+                Profile = "goo.gl/oKPtFH"
+            };
+            //e1.WriteToConsole();
+            e1.Info();
 
         }
 

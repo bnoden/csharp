@@ -145,5 +145,9 @@ stack memory and heap memory
 						3. nothing will derive from it
 				otherwise probably use class
 
+~SomeClass(){} // Finalizer AKA Destructor
+
+
+
 
 
