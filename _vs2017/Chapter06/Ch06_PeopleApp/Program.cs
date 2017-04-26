@@ -85,6 +85,20 @@ namespace Ch06_PeopleApp
             WriteLine($"{friend.Name.Split(' ')[0]}'s favorite ice-cream flavor is {friend.FavIceCream}.");
             friend.FavPrimaryColor = "Red";
             WriteLine($"Mr. {friend.Name.Split(' ')[1]}'s favorite primary color is {friend.FavPrimaryColor}.");
+            ReadLine();
+
+            friend.Children.Add(new Person {Name="Janice"});
+            friend.Children.Add(new Person {Name="Monica"});
+            friend[1].Children.Add(new Person {Name="Alex P. Keaton"});
+            friend[1].Children.Add(new Person {Name="Tom Selleck"});
+            WriteLine($"{friend.Name}'s first girlfriend is {friend.Children[0].Name}");
+            WriteLine($"{friend.Name}'s second girlfriend is {friend.Children[1].Name}");
+            WriteLine($"{friend.Name}'s first girlfriend is {friend[0].Name}");
+            WriteLine($"{friend.Name}'s second girlfriend is {friend[1].Name}");
+            ReadLine();
+            WriteLine($"{friend[1].Name}'s first boyfriend is {friend[1][0].Name}");
+            WriteLine($"{friend[1].Name}'s second boyfriend is {friend[1][1].Name}");
+            ReadLine();
 
         }
         
