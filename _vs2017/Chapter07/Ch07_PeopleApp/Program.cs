@@ -25,12 +25,39 @@ namespace Ch07_PeopleApp
             //WriteLine($"{phil.Name}'s third child is named \"{phil.Children[2].Name}\".");
 
             WriteLine($"5! is {phil.Factorial(5)}");
+            WriteLine();
 
             phil.LimitBreak += Phil_LimitBreak;
             Random r = new Random();
             while(!phil.LimitFull) {
                 phil.Hit(r.Next(5, 15));
             }
+            WriteLine();
+
+            Person[] people = {
+            new Person { Name = "Nebuchadnezzar" },
+            new Person { Name = "Penelope" },
+            new Person { Name = "Zebu" },
+            new Person { Name = "bnoden"}
+            };
+
+            WriteLine("Unsorted list:");
+            foreach (var person in people) {
+                WriteLine($"{person.Name}");
+            }
+
+            WriteLine("\nPerson sort:");
+            Array.Sort(people);
+            foreach (var person in people) {
+                WriteLine($"{person.Name}");
+            }
+
+            WriteLine("\nPersonComparer sort:");
+            Array.Sort(people, new PersonComparer());
+            foreach (var person in people) {
+                WriteLine($"{person.Name}");
+            }
+
 
         }
 
@@ -41,10 +68,12 @@ namespace Ch07_PeopleApp
                 WriteLine($"{p.Name} used Jazz Toss!");
             }
             Write($"{p.Name}'s Limit Meter is at {p.LimitMeter}% \t");
-            for (int i = 0; i <= p.LimitMeter/5; i++) {
+            for (int i = 1; i <= p.LimitMeter/5; i++) {
                 Write("|");
             }
-            ReadLine();
+            WriteLine();
         }
+
+
     }
 }

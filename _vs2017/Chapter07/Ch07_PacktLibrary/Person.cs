@@ -4,7 +4,7 @@ using static System.Console;
 
 namespace Packt.CS7
 {
-    public class Person
+    public partial class Person : IComparable<Person>
     {
 
         // fields
@@ -59,5 +59,8 @@ namespace Packt.CS7
             }
         }
 
+        public int CompareTo(Person other) {
+            return Name.CompareTo(other.Name);
+        }
     }
 }
