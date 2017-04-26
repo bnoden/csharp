@@ -40,7 +40,11 @@ namespace Ch07_PeopleApp
                 p.Unload();
                 WriteLine($"{p.Name} used Jazz Toss!");
             }
-            WriteLine($"{p.Name}'s Limit Meter is at {p.LimitMeter}%");
+            Write($"{p.Name}'s Limit Meter is at {p.LimitMeter}% \t");
+            for (int i = 0; i <= p.LimitMeter/5; i++) {
+                Write("|");
+            }
+            ReadLine();
         }
     }
 }
