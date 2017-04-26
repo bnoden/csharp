@@ -26,6 +26,21 @@ namespace Ch07_PeopleApp
 
             WriteLine($"5! is {phil.Factorial(5)}");
 
+            phil.LimitBreak += Phil_LimitBreak;
+            Random r = new Random();
+            while(!phil.LimitFull) {
+                phil.Hit(r.Next(5, 15));
+            }
+
+        }
+
+        private static void Phil_LimitBreak(object sender, EventArgs e) {
+            Person p = (Person)sender;
+            if (p.LimitFull) {
+                p.Unload();
+                WriteLine($"{p.Name} used Jazz Toss!");
+            }
+            WriteLine($"{p.Name}'s Limit Meter is at {p.LimitMeter}%");
         }
     }
 }

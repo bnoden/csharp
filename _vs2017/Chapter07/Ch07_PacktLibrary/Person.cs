@@ -39,5 +39,25 @@ namespace Packt.CS7
             return localFactorial(num);
         }
 
+        // event
+        public event EventHandler LimitBreak;
+
+        // field
+        public int LimitMeter;
+        private const int LIMIT_MAX = 100;
+        public bool LimitFull = false;
+
+        // method
+        public void Hit(int dmg) {
+            LimitFull = LimitMeter >= LIMIT_MAX ? true : false;
+            LimitMeter = LimitFull ? LIMIT_MAX : LimitMeter+dmg;
+            LimitBreak?.Invoke(this, EventArgs.Empty);
+        }
+        public void Unload() {
+            if (LimitFull) {
+                LimitMeter = 0;
+            }
+        }
+
     }
 }

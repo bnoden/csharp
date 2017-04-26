@@ -118,3 +118,8 @@ Use properties instead of fields when you want to validate what value can be sto
 	when you want to read and write to fields without using methods,
 		when you want to data bind in XAML.
 
+Microsoft has 2 predefined delegates for use as events:
+    public delegate void EventHandler(object sender, EventArgs e);
+    public delegate void EventHandler<TEventArgs>(object sender, TEventArgs e);
+
+
