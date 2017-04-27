@@ -77,6 +77,14 @@ namespace Ch07_PeopleApp
             //e1.WriteToConsole();
             e1.Info();
 
+            e1.EmployeeCode = "JJ001";
+            e1.HireDate = new DateTime(2014, 11, 23);
+            WriteLine();
+            WriteLine($"{e1.Name} was hired on {e1.HireDate:dd/MM/yy}");
+            WriteLine();
+            WriteLine(e1.ToString());
+
+
         }
 
         private static void Phil_LimitBreak(object sender, EventArgs e) {

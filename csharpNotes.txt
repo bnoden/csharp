@@ -147,6 +147,8 @@ stack memory and heap memory
 
 ~SomeClass(){} // Finalizer AKA Destructor
 
+In general it's best to mark class methods and property members as virtual.
+
 
 
 
