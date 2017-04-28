@@ -151,8 +151,62 @@ In general it's best to mark class methods and property members as virtual.
 
 Cannot inherit from sealed class
 
-In .NET Core, always use Dispose() instead of Close() for files.
+When closing files in .NET Core, always use Dispose() instead of Close()
 
+Common members of Stream class:
+	CanRead, CanWrite
+		determines whether you can read from and write to the stream
+	Length, Position
+		determines the total number of bytes and the current position within the stream
+	Dispose()
+		closes the stream and releases its resources
+	Flush()
+		if the stream has a buffer, then it is cleared and written to the underlying stream
+	Read(), ReadAsync()
+		reads a specified number of bytes from the stream into a byte array and advances the position
+	ReadByte()
+		reads the next byte from the stream and advances the position
+	Seek()
+		moves the position to the specified position (if CanSeek is true)
+	Write(), WriteAsync()
+		writes the contents of a byte array into the stream
+	WriteByte()
+		writes a byte to the stream
+
+	Storage streams:
+		System.IO
+			FileStream
+				stored in filesystem
+			MemoryStream
+				stored in memory in the current process
+		System.Net.Sockets
+			NetworkStream
+				stored at a network location
+
+	Function streams - can only but plugged onto other streams to add functionality
+		System.Security.Cryptography CryptoStream
+			encrypts and decrypts the stream
+		System.IO.Compression GZipStream, DeflateStream
+			compresses and decompresses the stream
+		System.Net.Security AuthenticatedStream
+			sends credentials across the stream
+
+	Helper classes
+		System.IO
+			StreamReader
+				reads from streams as text
+			StreamWriter
+				writes to streams as text
+			BinaryReader
+				reads from streams as .NET types
+			BinaryWriter
+				writes to streams as .NET types
+
+		System.Xml
+			XmlReader
+				reads from streams as XML
+			XmlWriter
+				writes to streams as XML
 
 
 
