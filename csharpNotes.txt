@@ -151,6 +151,8 @@ In general it's best to mark class methods and property members as virtual.
 
 Cannot inherit from sealed class
 
+In .NET Core, always use Dispose() instead of Close() for files.
+
 
 
 
