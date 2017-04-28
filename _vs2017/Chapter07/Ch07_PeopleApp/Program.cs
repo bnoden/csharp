@@ -83,6 +83,17 @@ namespace Ch07_PeopleApp
             WriteLine($"{e1.Name} was hired on {e1.HireDate:dd/MM/yy}");
             WriteLine();
             WriteLine(e1.ToString());
+            WriteLine();
+
+            Employee aliceInEmployee = new Employee {
+                Name = "Alice",
+                EmployeeCode = "AA123"
+            };
+            Person aliceInPerson = aliceInEmployee;
+            aliceInEmployee.WriteToConsole();
+            aliceInPerson.WriteToConsole();
+            WriteLine(aliceInEmployee.ToString());
+            WriteLine(aliceInPerson.ToString());
 
 
         }

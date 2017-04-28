@@ -149,6 +149,8 @@ stack memory and heap memory
 
 In general it's best to mark class methods and property members as virtual.
 
+Cannot inherit from sealed class
+
 
 
 
