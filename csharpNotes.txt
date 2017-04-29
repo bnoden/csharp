@@ -213,6 +213,12 @@ XmlSerializer
 		the type must have a parameter-less constructor
 			you can customize the output with attributes
 
-
+Waiting for tasks
+	t.Wait()
+		waits for the task instance named t to complete execution
+	Task.WaitAny(Task[])
+		waits for any of the tasks in the array to complete execution
+	Task.WaitAll(Task[])
+		waits for all the tasks in the array to complete execution
 
 
