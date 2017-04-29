@@ -208,6 +208,11 @@ Common members of Stream class:
 			XmlWriter
 				writes to streams as XML
 
+XmlSerializer
+	only public fields and properties are included
+		the type must have a parameter-less constructor
+			you can customize the output with attributes
+
 
 
 
