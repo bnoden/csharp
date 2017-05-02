@@ -28,14 +28,14 @@ class Program {
 
         Console.WriteLine("Day\tAmount Owed\n---\t-----------");
 
-        for (int i = 0; i < 64; i++) {
-            if (pay >= 1000000 && bigDay < 1) { bigDay = day; }
-
+        while (day<64) {
+            if (pay >= 1_000_000 && bigDay < 1) { bigDay = day; }
             day++;
-            Console.WriteLine("{0}\t{1:c2}", day, pay);
-            pay+=pay;
+            Console.WriteLine($"{day}\t{pay:c2}");
+            pay*=2;
         }
-        Console.WriteLine("\nOn day " + bigDay +
-            " the king paid a total of one million dollars.");
+        Console.WriteLine(
+            $"\nOn day {bigDay} the king paid a total of one million dollars."
+            );
     }
 };
