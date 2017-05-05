@@ -255,5 +255,11 @@ ASP.NET Core MVC
 		Views - .cshtml files, combining HTML and C# code, enabling dynamic HTML response
 		Services - interfaces and classes for integrating with external services, eg. SMS for texts
 
+RESTORE FILELISTONLY
+FROM DISK = 'D:\northwind.bak'
+GO
+
+Northwind
+Northwind_log
 
 
