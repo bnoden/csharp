@@ -243,4 +243,17 @@ XAML controls:
 	Scrollbar, Slider, StatusBar
 		Miscellaneous user interface elements
 
+ASP.NET Core MVC
+	
+	folders:
+		wwwroot - static content such as CSS, images, javascript, favicon, etc.
+		Data - Entity Framework Core classes used by ASP.NET Identity for authentication/authorization
+		Dependencies = graphical representation of Bower & NuGet for package management.
+			Actual files are bower.json and project solution file (.csproj)
+		Controllers - C# classes with methods (actions) that fetch a Model and pass to View
+		Models - classes that represent all data required to respond to HTTP request
+		Views - .cshtml files, combining HTML and C# code, enabling dynamic HTML response
+		Services - interfaces and classes for integrating with external services, eg. SMS for texts
+
+
 
